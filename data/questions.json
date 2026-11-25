@@ -350,5 +350,31 @@
         "resposta": 2,
         "dificuldade": "dificil",
         "categoria": "Cinema"
+    },
+    {
+        "id": 28,
+        "pergunta": "Qual o nome do irmão de Percy Jackson?",
+        "alternativas": [
+            "Groover",
+            "Tyson",
+            "Jason",
+            "Alison"
+        ],
+        "resposta": 1,
+        "dificuldade": "medio",
+        "categoria": "Cinema"
+    },
+    {
+        "id": 29,
+        "pergunta": "Qual cromossomo causa a Sindrome de Down ao ser copiado?",
+        "alternativas": [
+            "21",
+            "24",
+            "10",
+            "11"
+        ],
+        "resposta": 1,
+        "dificuldade": "medio",
+        "categoria": "Biologia"
     }
 ]
