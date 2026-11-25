@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Show do Milhão</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Show do Milhão</h1>
+        <p>Você está preparado para ganhar 1 milhão?</p>
+    </header>
+
+    <main>
+
+        <section id="premiacao">
+
+            <p id="numero-pergunta">
+                Pergunta 1 de 16
+            </p>
+
+            <h2 id="valor-pergunta">
+                Valendo R$ 1.000
+            </h2>
+
+            <p id="nivel-dificuldade">
+                Nível fácil
+            </p>
+
+        </section>
+
+        <section id="pergunta">
+            <h2 id="texto-pergunta">
+                Carregando perguntas...
+            </h2>
+        </section>
+
+        <section id="alternativas">
+            <button data-index="0" disabled></button>
+            <button data-index="1" disabled></button>
+            <button data-index="2" disabled></button>
+            <button data-index="3" disabled></button>
+        </section>
+
+        <section id="painel-valores">
+
+            <div class="valor-card errar">
+                <span>ERRAR</span>
+                <strong id="valor-errar">R$ 0</strong>
+            </div>
+
+            <div class="valor-card parar">
+                <span>PARAR</span>
+                <strong id="valor-parar">R$ 0</strong>
+            </div>
+
+            <div class="valor-card acertar">
+                <span>ACERTAR</span>
+                <strong id="valor-acertar">R$ 1.000</strong>
+            </div>
+
+        </section>
+
+        <section id="painel-universitarios">
+
+            <h3>Seus universitários</h3>
+
+            <div id="equipe-universitarios"></div>
+
+        </section>
+
+        <section id="ajudas">
+
+            <button id="btn-cartas" disabled>
+                Cartas (1)
+            </button>
+
+            <button id="btn-universitarios" disabled>
+                Universitários (1)
+            </button>
+
+            <button id="btn-placas" disabled>
+                Placas (1)
+            </button>
+
+            <button id="btn-pular" disabled>
+                Pular (2)
+            </button>
+
+        </section>
+
+        <section id="controles">
+            <button id="btn-parar">Parar</button>
+
+            <button id="btn-confirmar" disabled>
+                Confirmar resposta
+            </button>
+        </section>
+
+        <section id="feedback" aria-live="polite"></section>
+
+        <section id="navegacao">
+            <button id="btn-proxima" hidden>
+                Próxima pergunta
+            </button>
+
+            <button id="btn-reiniciar" hidden>
+                Jogar novamente
+            </button>
+        </section>
+
+    </main>
+
+    <dialog id="modal-cartas">
+
+        <h2>Ajuda das cartas</h2>
+
+        <p id="mensagem-cartas">
+            Escolha uma das quatro cartas.
+        </p>
+
+        <div id="baralho">
+
+            <button class="carta" data-carta="0">?</button>
+
+            <button class="carta" data-carta="1">?</button>
+
+            <button class="carta" data-carta="2">?</button>
+
+            <button class="carta" data-carta="3">?</button>
+
+        </div>
+
+        <button id="btn-fechar-cartas" disabled>
+            Continuar
+        </button>
+
+    </dialog>
+
+    <dialog id="modal-pular">
+
+        <h2>Pular pergunta</h2>
+
+        <p id="mensagem-pular"></p>
+
+        <div class="informacoes-pulo">
+
+            <span>Pulos disponíveis</span>
+
+            <strong id="pulos-restantes">2</strong>
+
+        </div>
+
+        <div class="controles-modal">
+
+            <button id="btn-cancelar-pulo">
+                Cancelar
+            </button>
+
+            <button id="btn-confirmar-pulo">
+                Confirmar pulo
+            </button>
+
+        </div>
+
+    </dialog>
+
+    <dialog id="modal-placas">
+
+        <h2>Opinião da Plateia</h2>
+
+        <p class="subtitulo-placas">
+            100 participantes • 100 votos
+        </p>
+
+        <div id="grafico-placas">
+
+            <div class="coluna-placa">
+
+                <span class="percentual-placa">0%</span>
+
+                <div class="trilho-placa">
+                    <div class="barra-placa"></div>
+                </div>
+
+                <span class="rotulo-placa">1</span>
+
+            </div>
+
+            <div class="coluna-placa">
+
+                <span class="percentual-placa">0%</span>
+
+                <div class="trilho-placa">
+                    <div class="barra-placa"></div>
+                </div>
+
+                <span class="rotulo-placa">2</span>
+
+            </div>
+
+            <div class="coluna-placa">
+
+                <span class="percentual-placa">0%</span>
+
+                <div class="trilho-placa">
+                    <div class="barra-placa"></div>
+                </div>
+
+                <span class="rotulo-placa">3</span>
+
+            </div>
+
+            <div class="coluna-placa">
+
+                <span class="percentual-placa">0%</span>
+
+                <div class="trilho-placa">
+                    <div class="barra-placa"></div>
+                </div>
+
+                <span class="rotulo-placa">4</span>
+
+            </div>
+
+        </div>
+
+        <p id="mensagem-placas" aria-live="polite">
+            A decisão final continua sendo sua!
+        </p>
+
+        <button id="btn-fechar-placas">
+            Continuar
+        </button>
+
+    </dialog>
+
+    <dialog id="modal-universitarios">
+
+        <h2>Ajuda dos Universitários</h2>
+
+        <p id="pergunta-universitarios"></p>
+
+        <div id="respostas-universitarios"></div>
+
+        <p class="mensagem-universitarios">
+            A decisão final continua sendo sua!
+        </p>
+
+        <button id="btn-fechar-universitarios">
+            Continuar
+        </button>
+
+    </dialog>
+
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>

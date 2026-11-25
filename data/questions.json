@@ -1,0 +1,354 @@
+
+[
+    {
+        "id": 1,
+        "pergunta": "Qual é o maior planeta do Sistema Solar?",
+        "alternativas": [
+            "Saturno",
+            "Júpiter",
+            "Netuno",
+            "Urano"
+        ],
+        "resposta": 1,
+        "dificuldade": "facil",
+        "categoria": "Astronomia"
+    },
+    {
+        "id": 2,
+        "pergunta": "Quantos lados possui um hexágono?",
+        "alternativas": [
+            "Cinco",
+            "Sete",
+            "Oito",
+            "Seis"
+        ],
+        "resposta": 3,
+        "dificuldade": "facil",
+        "categoria": "Matemática"
+    },
+    {
+        "id": 3,
+        "pergunta": "Qual é a capital do Brasil?",
+        "alternativas": [
+            "Brasília",
+            "São Paulo",
+            "Rio de Janeiro",
+            "Salvador"
+        ],
+        "resposta": 0,
+        "dificuldade": "facil",
+        "categoria": "Geografia"
+    },
+    {
+        "id": 4,
+        "pergunta": "Qual animal é conhecido como o rei da selva?",
+        "alternativas": [
+            "Tigre",
+            "Elefante",
+            "Leão",
+            "Gorila"
+        ],
+        "resposta": 2,
+        "dificuldade": "facil",
+        "categoria": "Animais"
+    },
+    {
+        "id": 5,
+        "pergunta": "Qual é o maior oceano da Terra?",
+        "alternativas": [
+            "Atlântico",
+            "Pacífico",
+            "Índico",
+            "Ártico"
+        ],
+        "resposta": 1,
+        "dificuldade": "facil",
+        "categoria": "Geografia"
+    },
+    {
+        "id": 6,
+        "pergunta": "Quem escreveu Dom Casmurro?",
+        "alternativas": [
+            "José de Alencar",
+            "Jorge Amado",
+            "Carlos Drummond de Andrade",
+            "Machado de Assis"
+        ],
+        "resposta": 3,
+        "dificuldade": "medio",
+        "categoria": "Literatura"
+    },
+    {
+        "id": 7,
+        "pergunta": "Qual elemento químico possui o símbolo Fe?",
+        "alternativas": [
+            "Ferro",
+            "Flúor",
+            "Fósforo",
+            "Frâncio"
+        ],
+        "resposta": 0,
+        "dificuldade": "medio",
+        "categoria": "Química"
+    },
+    {
+        "id": 8,
+        "pergunta": "Em que ano ocorreu a queda do Muro de Berlim?",
+        "alternativas": [
+            "1985",
+            "1991",
+            "1989",
+            "1993"
+        ],
+        "resposta": 2,
+        "dificuldade": "medio",
+        "categoria": "História"
+    },
+    {
+        "id": 9,
+        "pergunta": "Qual é o menor país do mundo em extensão territorial?",
+        "alternativas": [
+            "Mônaco",
+            "Vaticano",
+            "Malta",
+            "San Marino"
+        ],
+        "resposta": 1,
+        "dificuldade": "medio",
+        "categoria": "Geografia"
+    },
+    {
+        "id": 10,
+        "pergunta": "Quem pintou a obra Guernica?",
+        "alternativas": [
+            "Salvador Dalí",
+            "Claude Monet",
+            "Vincent van Gogh",
+            "Pablo Picasso"
+        ],
+        "resposta": 3,
+        "dificuldade": "medio",
+        "categoria": "Arte"
+    },
+    {
+        "id": 11,
+        "pergunta": "Qual é a unidade de medida da capacitância elétrica?",
+        "alternativas": [
+            "Farad",
+            "Henry",
+            "Tesla",
+            "Weber"
+        ],
+        "resposta": 0,
+        "dificuldade": "dificil",
+        "categoria": "Física"
+    },
+    {
+        "id": 12,
+        "pergunta": "Qual tratado de 1494 dividiu terras ultramarinas entre Portugal e Castela?",
+        "alternativas": [
+            "Tratado de Utrecht",
+            "Tratado de Madri",
+            "Tratado de Tordesilhas",
+            "Tratado de Versalhes"
+        ],
+        "resposta": 2,
+        "dificuldade": "dificil",
+        "categoria": "História"
+    },
+    {
+        "id": 13,
+        "pergunta": "Qual cientista formulou o princípio da incerteza?",
+        "alternativas": [
+            "Erwin Schrödinger",
+            "Werner Heisenberg",
+            "Max Planck",
+            "Niels Bohr"
+        ],
+        "resposta": 1,
+        "dificuldade": "dificil",
+        "categoria": "Física"
+    },
+    {
+        "id": 14,
+        "pergunta": "Qual é o elemento químico de número atômico 74?",
+        "alternativas": [
+            "Ósmio",
+            "Titânio",
+            "Platina",
+            "Tungstênio"
+        ],
+        "resposta": 3,
+        "dificuldade": "dificil",
+        "categoria": "Química"
+    },
+    {
+        "id": 15,
+        "pergunta": "Qual descontinuidade geológica separa a crosta terrestre do manto?",
+        "alternativas": [
+            "Mohorovičić",
+            "Gutenberg",
+            "Lehmann",
+            "Conrad"
+        ],
+        "resposta": 0,
+        "dificuldade": "dificil",
+        "categoria": "Geologia"
+    },
+    {
+    "id": 16,
+    "pergunta": "Qual matemático demonstrou o Último Teorema de Fermat?",
+    "alternativas": [
+        "Alan Turing",
+        "Andrew Wiles",
+        "John von Neumann",
+        "David Hilbert"
+    ],
+    "resposta": 1,
+    "dificuldade": "milhao",
+    "categoria": "Matemática"
+    },
+    {
+        "id": 17,
+        "pergunta": "Qual foi o primeiro elemento químico produzido artificialmente?",
+        "alternativas": [
+            "Promécio",
+            "Netúnio",
+            "Tecnécio",
+            "Plutônio"
+        ],
+        "resposta": 2,
+        "dificuldade": "milhao",
+        "categoria": "Química"
+    },
+    {
+        "id": 18,
+        "pergunta": "Qual imperador romano governava quando ocorreu a erupção do Vesúvio em 79 d.C.?",
+        "alternativas": [
+            "Tito",
+            "Nero",
+            "Trajano",
+            "Augusto"
+        ],
+        "resposta": 0,
+        "dificuldade": "milhao",
+        "categoria": "História"
+    },
+    {
+        "id": 19,
+        "pergunta": "Qual é o maior satélite natural de Netuno?",
+        "alternativas": [
+            "Nereida",
+            "Proteu",
+            "Larissa",
+            "Tritão"
+        ],
+        "resposta": 3,
+        "dificuldade": "milhao",
+        "categoria": "Astronomia"
+    },
+    {
+        "id": 20,
+        "pergunta": "Quem escreveu a obra Crítica da Razão Pura?",
+        "alternativas": [
+            "Friedrich Nietzsche",
+            "Immanuel Kant",
+            "René Descartes",
+            "Arthur Schopenhauer"
+        ],
+        "resposta": 1,
+        "dificuldade": "milhao",
+        "categoria": "Filosofia"
+    },
+    {
+        "id": 21,
+        "pergunta": "Qual é o maior mamífero do mundo?",
+        "alternativas": [
+            "Elefante africano",
+            "Baleia-azul",
+            "Hipopótamo",
+            "Orca"
+        ],
+        "resposta": 1,
+        "dificuldade": "facil",
+        "categoria": "Biologia"
+    },
+    {
+        "id": 22,
+        "pergunta": "Qual planeta é conhecido como Planeta Vermelho?",
+        "alternativas": [
+            "Vênus",
+            "Mercúrio",
+            "Júpiter",
+            "Marte"
+        ],
+        "resposta": 3,
+        "dificuldade": "facil",
+        "categoria": "Astronomia"
+    },
+    {
+        "id": 23,
+        "pergunta": "Qual organela celular é responsável pela maior parte da produção de ATP na respiração aeróbica?",
+        "alternativas": [
+            "Mitocôndria",
+            "Ribossomo",
+            "Lisossomo",
+            "Complexo de Golgi"
+        ],
+        "resposta": 0,
+        "dificuldade": "medio",
+        "categoria": "Biologia"
+    },
+    {
+        "id": 24,
+        "pergunta": "Qual estrutura de dados segue o princípio FIFO?",
+        "alternativas": [
+            "Pilha",
+            "Árvore",
+            "Fila",
+            "Grafo"
+        ],
+        "resposta": 2,
+        "dificuldade": "medio",
+        "categoria": "Tecnologia"
+    },
+    {
+        "id": 25,
+        "pergunta": "Qual mineral representa o grau 9 na escala de dureza de Mohs?",
+        "alternativas": [
+            "Topázio",
+            "Coríndon",
+            "Quartzo",
+            "Diamante"
+        ],
+        "resposta": 1,
+        "dificuldade": "dificil",
+        "categoria": "Geologia"
+    },
+    {
+        "id": 26,
+        "pergunta": "Qual enzima é responsável pela síntese de RNA a partir de um molde de DNA?",
+        "alternativas": [
+            "DNA ligase",
+            "Helicase",
+            "DNA polimerase",
+            "RNA polimerase"
+        ],
+        "resposta": 3,
+        "dificuldade": "dificil",
+        "categoria": "Biologia"
+    },
+    {
+        "id": 27,
+        "pergunta": "De que material é feito a primeira varinha de Harry Potter?",
+        "alternativas": [
+            "Ébano",
+            "Carvalho",
+            "Azevinho",
+            "Aveleira"
+        ],
+        "resposta": 2,
+        "dificuldade": "dificil",
+        "categoria": "Cinema"
+    }
+]

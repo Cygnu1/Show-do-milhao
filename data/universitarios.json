@@ -1,0 +1,175 @@
+
+{
+    "nomes": [
+        "Alan",
+        "Joana",
+        "Anderson",
+        "Vinicius",
+        "André",
+        "Vitin",
+        "Antonio",
+        "Ian",
+        "Chrystian",
+        "Yasmin",
+        "Mario",
+        "Guilherme",
+        "Luysa",
+        "Luis Guilherme",
+        "Victor",
+        "Gabriel",
+        "Durand",
+        "Maxwell",
+        "Sarah",
+        "Clara"
+    ],
+
+    "cursos": [
+        {
+            "nome": "Geologia",
+            "especialidades": ["Geologia"],
+            "relacionadas": [
+                "Geografia", "Química", "Física"
+            ]
+        },
+        {
+            "nome": "Medicina",
+            "especialidades": ["Biologia"],
+            "relacionadas": [
+                "Química", "Animais"
+            ]
+        },
+        {
+            "nome": "Ciências Biológicas",
+            "especialidades": ["Biologia", "Animais"],
+            "relacionadas": [
+                "Química", "Geologia"
+            ]
+        },
+        {
+            "nome": "Física",
+            "especialidades": ["Física"],
+            "relacionadas": [
+                "Matemática", "Astronomia", "Química"
+            ]
+        },
+        {
+            "nome": "Química",
+            "especialidades": ["Química"],
+            "relacionadas": [
+                "Física", "Biologia", "Geologia"
+            ]
+        },
+        {
+            "nome": "Matemática",
+            "especialidades": ["Matemática"],
+            "relacionadas": [
+                "Física", "Tecnologia", "Astronomia"
+            ]
+        },
+        {
+            "nome": "História",
+            "especialidades": ["História"],
+            "relacionadas": [
+                "Geografia", "Filosofia",
+                "Literatura", "Arte"
+            ]
+        },
+        {
+            "nome": "Geografia",
+            "especialidades": ["Geografia"],
+            "relacionadas": [
+                "Geologia", "História", "Biologia"
+            ]
+        },
+        {
+            "nome": "Letras",
+            "especialidades": ["Literatura"],
+            "relacionadas": [
+                "História", "Filosofia", "Arte"
+            ]
+        },
+        {
+            "nome": "Filosofia",
+            "especialidades": ["Filosofia"],
+            "relacionadas": [
+                "História", "Literatura"
+            ]
+        },
+        {
+            "nome": "Ciência da Computação",
+            "especialidades": ["Tecnologia"],
+            "relacionadas": [
+                "Matemática", "Física"
+            ]
+        },
+        {
+            "nome": "Direito",
+            "especialidades": ["Direito"],
+            "relacionadas": [
+                "História", "Filosofia"
+            ]
+        },
+        {
+            "nome": "Educação Física",
+            "especialidades": ["Esportes"],
+            "relacionadas": [
+                "Biologia", "Física"
+            ]
+        },
+        {
+            "nome": "Artes Visuais",
+            "especialidades": ["Arte"],
+            "relacionadas": [
+                "História", "Literatura"
+            ]
+        },
+        {
+            "nome": "Engenharia Civil",
+            "especialidades": ["Engenharia"],
+            "relacionadas": [
+                "Matemática", "Física",
+                "Geologia", "Tecnologia"
+            ]
+        },
+        {
+            "nome": "Ciências Econômicas",
+            "especialidades": ["Economia"],
+            "relacionadas": [
+                "Matemática", "História", "Geografia"
+            ]
+        },
+        {
+            "nome": "Astronomia",
+            "especialidades": ["Astronomia"],
+            "relacionadas": [
+                "Física", "Matemática", "Geologia"
+            ]
+        }
+    ],
+
+    "frases": {
+        "especialista": [
+            "Essa é da minha área! Acredito que é a alternativa {alternativa}.",
+            "Estudei esse assunto na faculdade. Talvez a alternativa {alternativa}.",
+            "Se não me engano é a alternativa {alternativa}.",
+            "Essa eu acho que sei! Escolheria a alternativa {alternativa}.",
+            "Esse é meu assunto. Eu iria na alternativa {alternativa}."
+        ],
+
+        "relacionada": [
+            "Já estudei algo sobre isso. Acho que é a alternativa {alternativa}.",
+            "Pelo que me lembro, é a alternativa {alternativa}.",
+            "Esse assunto tem relação com meu curso. Apostaria na alternativa {alternativa}.",
+            "Acredito que seja a alternativa {alternativa}.",
+            "Já ouvi falar sobre isso. Minha escolha é a alternativa {alternativa}."
+        ],
+
+        "semRelacao": [
+            "Não é muito a minha área, mas chutaria a alternativa {alternativa}.",
+            "Não tenho certeza. Vou de alternativa {alternativa}.",
+            "Essa é complicada! Acho que é a alternativa {alternativa}.",
+            "Meu palpite é a alternativa {alternativa}.",
+            "Não conheço muito esse assunto, mas escolheria a alternativa {alternativa}."
+        ]
+    }
+}
