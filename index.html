@@ -197,18 +197,579 @@
     </section>
 
 
+    
     <!-- TELA DE REGRAS -->
     <section id="tela-regras" class="tela tela-menu" hidden>
 
-        <h1>Como jogar</h1>
+        <!-- Cabeçalho -->
+        <div class="cabecalho-manual">
 
-        <p>As regras serão apresentadas nesta tela.</p>
+            <span class="icone-cabecalho" aria-hidden="true">
+                📖
+            </span>
 
-        <button class="botao-menu" data-tela="tela-inicial">
-            Voltar
+            <h1>COMO JOGAR</h1>
+
+            <p>
+                Conheça as regras e prepare-se
+                para conquistar o milhão.
+            </p>
+
+        </div>
+
+
+        <!-- Abas de navegação -->
+        <div class="abas-manual"
+            role="tablist"
+            aria-label="Manual do jogo">
+
+            <button id="aba-regras"
+                    class="aba-manual ativa"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="manual-regras"
+                    data-manual="manual-regras">
+
+                Regras
+
+            </button>
+
+            <button id="aba-premios"
+                    class="aba-manual"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="manual-premios"
+                    data-manual="manual-premios"
+                    tabindex="-1">
+
+                Premiação
+
+            </button>
+
+            <button id="aba-ajudas"
+                    class="aba-manual"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="manual-ajudas"
+                    data-manual="manual-ajudas"
+                    tabindex="-1">
+
+                Ajudas
+
+            </button>
+
+        </div>
+
+
+        <!-- ABA: REGRAS -->
+        <div id="manual-regras"
+            class="painel-manual"
+            role="tabpanel"
+            aria-labelledby="aba-regras">
+
+            <article class="card-manual">
+
+                <h2>O objetivo do jogo</h2>
+
+                <p>
+                    Responda corretamente a 16 perguntas
+                    de conhecimentos gerais para conquistar
+                    o prêmio máximo de R$ 1.000.000.
+                </p>
+
+                <div class="grade-dificuldades">
+
+                    <div class="card-dificuldade facil">
+                        <strong>5</strong>
+                        <span>Perguntas fáceis</span>
+                    </div>
+
+                    <div class="card-dificuldade medio">
+                        <strong>5</strong>
+                        <span>Perguntas médias</span>
+                    </div>
+
+                    <div class="card-dificuldade dificil">
+                        <strong>5</strong>
+                        <span>Perguntas difíceis</span>
+                    </div>
+
+                    <div class="card-dificuldade milhao">
+                        <strong>1</strong>
+                        <span>Pergunta do milhão</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="card-manual">
+
+                <h2>Como responder</h2>
+
+                <p>
+                    Cada pergunta possui quatro alternativas,
+                    sendo apenas uma correta.
+                </p>
+
+                <p>
+                    Selecione uma alternativa e pressione
+                    Confirmar resposta. Você poderá alterar
+                    sua escolha antes da confirmação.
+                </p>
+
+                <p>
+                    Após confirmar, não será possível
+                    modificar sua resposta.
+                </p>
+
+                <p>
+                    Não existe limite de tempo para responder.
+                </p>
+
+            </article>
+
+
+            <article class="card-manual regra-acertar">
+
+                <h2>✓ Acertar</h2>
+
+                <p>
+                    Você conquista o valor correspondente
+                    à pergunta atual e avança para a
+                    próxima rodada.
+                </p>
+
+            </article>
+
+
+            <article class="card-manual regra-parar">
+
+                <h2>■ Parar</h2>
+
+                <p>
+                    Você pode encerrar a partida antes de
+                    confirmar uma resposta, garantindo
+                    todo o prêmio acumulado até aquele momento.
+                </p>
+
+            </article>
+
+
+            <article class="card-manual regra-errar">
+
+                <h2>✕ Errar</h2>
+
+                <p>
+                    Ao confirmar uma resposta incorreta,
+                    a partida será encerrada e você receberá
+                    metade do prêmio acumulado.
+                </p>
+
+                <p>
+                    A pergunta do milhão possui uma regra
+                    especial.
+                </p>
+
+            </article>
+
+
+            <article class="card-manual regra-milhao">
+
+                <h2>🏆 A pergunta do milhão</h2>
+
+                <p>
+                    Na última pergunta, nenhuma ajuda
+                    estará disponível.
+                </p>
+
+                <div class="resultados-milhao">
+
+                    <div class="resultado-milhao acertar">
+                        <span>ACERTAR</span>
+                        <strong>R$ 1.000.000</strong>
+                    </div>
+
+                    <div class="resultado-milhao parar">
+                        <span>PARAR</span>
+                        <strong>R$ 500.000</strong>
+                    </div>
+
+                    <div class="resultado-milhao errar">
+                        <span>ERRAR</span>
+                        <strong>R$ 0</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ABA: PREMIAÇÃO -->
+        <div id="manual-premios"
+            class="painel-manual"
+            role="tabpanel"
+            aria-labelledby="aba-premios"
+            hidden>
+
+            <article class="card-manual">
+
+                <h2>Escada de premiação</h2>
+
+                <p>
+                    A cada resposta correta, você avança
+                    um degrau em direção ao milhão.
+                </p>
+
+                <div class="legenda-premiacao">
+
+                    <span class="facil">● Fácil</span>
+
+                    <span class="medio">● Média</span>
+
+                    <span class="dificil">● Difícil</span>
+
+                    <span class="milhao">● Milhão</span>
+
+                </div>
+
+                <!-- Gerado dinamicamente pelo JavaScript -->
+                <ol id="escada-premiacao" reversed></ol>
+
+            </article>
+
+
+            <article class="card-manual">
+
+                <h2>Entenda sua premiação</h2>
+
+                <p>
+                    Imagine que você já conquistou
+                    R$ 20.000 e está respondendo à pergunta
+                    de R$ 30.000.
+                </p>
+
+                <div class="resultados-milhao">
+
+                    <div class="resultado-milhao acertar">
+                        <span>ACERTAR</span>
+                        <strong>R$ 30.000</strong>
+                    </div>
+
+                    <div class="resultado-milhao parar">
+                        <span>PARAR</span>
+                        <strong>R$ 20.000</strong>
+                    </div>
+
+                    <div class="resultado-milhao errar">
+                        <span>ERRAR</span>
+                        <strong>R$ 10.000</strong>
+                    </div>
+
+                </div>
+
+                <p class="observacao-manual">
+                    Todos os valores de premiação são fictícios.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <!-- ABA: AJUDAS -->
+        <div id="manual-ajudas"
+            class="painel-manual"
+            role="tabpanel"
+            aria-labelledby="aba-ajudas"
+            hidden>
+
+            <article class="card-manual">
+
+                <h2>Suas ajudas</h2>
+
+                <p>
+                    Você possui quatro tipos de ajuda,
+                    totalizando cinco utilizações durante
+                    a partida.
+                </p>
+
+            </article>
+
+
+            <!-- CARTAS -->
+            <article class="card-manual card-ajuda">
+
+                <div class="cabecalho-ajuda">
+
+                    <span class="icone-ajuda"
+                        aria-hidden="true">🃏</span>
+
+                    <div>
+                        <h2>Cartas</h2>
+                        <span class="limite-ajuda">
+                            1 utilização
+                        </span>
+                    </div>
+
+                </div>
+
+                <p>
+                    Escolha uma entre quatro cartas.
+                    O resultado determina quantas alternativas
+                    incorretas serão eliminadas.
+                </p>
+
+                <div class="grade-cartas-manual">
+
+                    <div class="carta-manual">
+                        <strong>K ♠</strong>
+                        <span>Elimina 0</span>
+                    </div>
+
+                    <div class="carta-manual">
+                        <strong>A ♥</strong>
+                        <span>Elimina 1</span>
+                    </div>
+
+                    <div class="carta-manual">
+                        <strong>2 ♣</strong>
+                        <span>Elimina 2</span>
+                    </div>
+
+                    <div class="carta-manual">
+                        <strong>3 ♦</strong>
+                        <span>Elimina 3</span>
+                    </div>
+
+                </div>
+
+                <p class="observacao-manual">
+                    A dificuldade da pergunta influencia
+                    as chances de cada resultado.
+                </p>
+
+            </article>
+
+
+            <!-- UNIVERSITÁRIOS -->
+            <article class="card-manual card-ajuda">
+
+                <div class="cabecalho-ajuda">
+
+                    <span class="icone-ajuda"
+                        aria-hidden="true">🎓</span>
+
+                    <div>
+                        <h2>Universitários</h2>
+                        <span class="limite-ajuda">
+                            1 utilização
+                        </span>
+                    </div>
+
+                </div>
+
+                <p>
+                    No início da partida, três universitários
+                    de diferentes cursos serão sorteados
+                    para formar sua equipe.
+                </p>
+
+                <p>
+                    Cada estudante apresentará uma opinião
+                    sobre a resposta correta.
+                </p>
+
+                <div class="exemplo-universitarios">
+
+                    <div>
+                        <span aria-hidden="true">🎓</span>
+                        <strong>Lucas</strong>
+                        <small>Física</small>
+                    </div>
+
+                    <div>
+                        <span aria-hidden="true">🎓</span>
+                        <strong>Mariana</strong>
+                        <small>História</small>
+                    </div>
+
+                    <div>
+                        <span aria-hidden="true">🎓</span>
+                        <strong>Rafael</strong>
+                        <small>Medicina</small>
+                    </div>
+
+                </div>
+
+                <p class="observacao-manual">
+                    O conhecimento de cada universitário
+                    depende de seu curso, do assunto e
+                    da dificuldade da pergunta.
+                    As opiniões podem ser diferentes.
+                </p>
+
+            </article>
+
+
+            <!-- PLACAS -->
+            <article class="card-manual card-ajuda">
+
+                <div class="cabecalho-ajuda">
+
+                    <span class="icone-ajuda"
+                        aria-hidden="true">👥</span>
+
+                    <div>
+                        <h2>Placas</h2>
+                        <span class="limite-ajuda">
+                            1 utilização
+                        </span>
+                    </div>
+
+                </div>
+
+                <p>
+                    Consulte a opinião de uma plateia
+                    composta por 100 participantes.
+                    Cada participante votará em uma
+                    das alternativas disponíveis.
+                </p>
+
+                <div class="exemplo-placas"
+                    aria-label="Exemplo: alternativa 1 com 15%, 2 com 60%, 3 com 20% e 4 com 5%">
+
+                    <div class="exemplo-coluna">
+                        <strong>15%</strong>
+                        <div class="exemplo-trilho">
+                            <div style="height: 15%"></div>
+                        </div>
+                        <span>1</span>
+                    </div>
+
+                    <div class="exemplo-coluna">
+                        <strong>60%</strong>
+                        <div class="exemplo-trilho">
+                            <div style="height: 60%"></div>
+                        </div>
+                        <span>2</span>
+                    </div>
+
+                    <div class="exemplo-coluna">
+                        <strong>20%</strong>
+                        <div class="exemplo-trilho">
+                            <div style="height: 20%"></div>
+                        </div>
+                        <span>3</span>
+                    </div>
+
+                    <div class="exemplo-coluna">
+                        <strong>5%</strong>
+                        <div class="exemplo-trilho">
+                            <div style="height: 5%"></div>
+                        </div>
+                        <span>4</span>
+                    </div>
+
+                </div>
+
+                <p class="observacao-manual">
+                    Exemplo ilustrativo de votação.
+                    A opinião da maioria não garante
+                    a resposta correta.
+                </p>
+
+            </article>
+
+
+            <!-- PULOS -->
+            <article class="card-manual card-ajuda">
+
+                <div class="cabecalho-ajuda">
+
+                    <span class="icone-ajuda"
+                        aria-hidden="true">⏭</span>
+
+                    <div>
+                        <h2>Pulos</h2>
+                        <span class="limite-ajuda">
+                            2 utilizações
+                        </span>
+                    </div>
+
+                </div>
+
+                <p>
+                    Substitua a pergunta atual por outra
+                    de mesma dificuldade, sem perder
+                    sua premiação ou avançar de rodada.
+                </p>
+
+                <p>
+                    Você poderá utilizar os dois pulos
+                    consecutivamente.
+                </p>
+
+                <p class="observacao-manual">
+                    Ajudas utilizadas antes de pular uma
+                    pergunta não serão recuperadas.
+                </p>
+
+            </article>
+
+
+            <!-- REGRAS GERAIS DAS AJUDAS -->
+            <article class="card-manual regra-milhao">
+
+                <h2>Regras importantes</h2>
+
+                <ul class="lista-manual">
+
+                    <li>
+                        As ajudas podem ser combinadas
+                        em uma mesma pergunta.
+                    </li>
+
+                    <li>
+                        Alternativas eliminadas pelas cartas
+                        não recebem votos da plateia
+                        ou dos universitários.
+                    </li>
+
+                    <li>
+                        Ajudas utilizadas não são recuperadas
+                        durante a partida.
+                    </li>
+
+                    <li>
+                        Nenhuma ajuda estará disponível
+                        na pergunta do milhão.
+                    </li>
+
+                    <li>
+                        A decisão final é sempre sua.
+                    </li>
+
+                </ul>
+
+            </article>
+
+        </div>
+
+
+        <!-- VOLTAR AO MENU -->
+        <button class="botao-menu btn-voltar-manual"
+                data-tela="tela-inicial">
+
+            ← Voltar ao menu principal
+
         </button>
 
     </section>
+
 
 
     <!-- TELA SOBRE O JOGO -->
