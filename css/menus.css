@@ -146,3 +146,951 @@
     }
 
 }
+
+
+/* =========================================
+   IDENTIDADE VISUAL DO JOGO
+========================================= */
+
+:root {
+
+    --menu-azul-profundo: #050b20;
+    --menu-azul-principal: #10234d;
+    --menu-azul-secundario: #21447d;
+
+    --menu-dourado: #d4af37;
+    --menu-dourado-claro: #ffd700;
+    --menu-dourado-suave: #fff1a0;
+
+    --menu-texto: #ffffff;
+    --menu-texto-secundario: #c5d0e8;
+    --menu-texto-discreto: #899cbf;
+
+}
+
+
+/* =========================================
+   CENÁRIO DA TELA INICIAL
+========================================= */
+
+#tela-inicial {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding: 35px 20px;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background:
+
+        radial-gradient(
+            ellipse at 50% 25%,
+            #1b3d79 0%,
+            #0c1b3b 35%,
+            transparent 70%
+        ),
+
+        var(--menu-azul-profundo);
+
+}
+
+
+.cenario-inicial {
+
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+}
+
+
+.luz-cenario {
+
+    position: absolute;
+
+    width: 55%;
+    height: 75%;
+
+    top: -25%;
+
+    opacity: 0.25;
+
+    background: radial-gradient(
+        ellipse,
+        #5288e5 0%,
+        transparent 65%
+    );
+
+    filter: blur(45px);
+
+}
+
+
+.luz-esquerda {
+
+    left: -20%;
+
+    transform: rotate(-25deg);
+
+}
+
+
+.luz-direita {
+
+    right: -20%;
+
+    transform: rotate(25deg);
+
+}
+
+
+.conteudo-inicial {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+
+    text-align: center;
+
+    z-index: 1;
+
+}
+
+
+/* =========================================
+   LOGOTIPO DO JOGO
+========================================= */
+
+.identidade-jogo {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.slogan-superior {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    color: var(--menu-dourado);
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.slogan-superior::before,
+.slogan-superior::after {
+
+    content: "";
+
+    width: 30px;
+    height: 1px;
+
+    background-color: var(--menu-dourado);
+
+}
+
+
+.logo-jogo {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 280px;
+    max-width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    box-sizing: border-box;
+
+    border: 3px solid var(--menu-dourado);
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        #244b8e 0%,
+        #10234d 55%,
+        #08132d 100%
+    );
+
+    box-shadow:
+
+        0 0 15px rgba(212, 175, 55, 0.25),
+
+        0 0 60px rgba(49, 93, 163, 0.45),
+
+        inset 0 0 30px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.logo-jogo::before {
+
+    content: "";
+
+    position: absolute;
+    inset: 7px;
+
+    border: 2px dotted var(--menu-dourado);
+    border-radius: 50%;
+
+    opacity: 0.8;
+
+    pointer-events: none;
+
+}
+
+
+.logo-jogo::after {
+
+    content: "";
+
+    position: absolute;
+    inset: 15px;
+
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+.logo-conteudo {
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    z-index: 1;
+
+}
+
+
+.logo-show,
+.logo-milhao {
+
+    display: block;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    color: var(--menu-dourado-claro);
+
+    background: linear-gradient(
+        180deg,
+        #fff5b5 0%,
+        #ffd700 45%,
+        #b8860b 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(
+        0 3px 3px rgba(0, 0, 0, 0.5)
+    );
+
+}
+
+
+.logo-show {
+
+    font-size: 44px;
+
+    letter-spacing: 6px;
+
+    padding-left: 6px;
+
+}
+
+
+.logo-do {
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: var(--menu-texto);
+
+    margin: 5px 0;
+
+}
+
+
+.logo-do::before,
+.logo-do::after {
+
+    content: "";
+
+    width: 35px;
+    height: 1px;
+
+    background-color: var(--menu-dourado);
+
+}
+
+
+.logo-milhao {
+
+    font-size: 43px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.logo-estrelas {
+
+    margin-top: 12px;
+
+    font-size: 16px;
+
+    letter-spacing: 5px;
+
+    color: var(--menu-dourado);
+
+}
+
+
+/* =========================================
+   APRESENTAÇÃO DO JOGO
+========================================= */
+
+.apresentacao-jogo {
+
+    margin-bottom: 25px;
+
+}
+
+
+.apresentacao-jogo h1 {
+
+    color: var(--menu-texto);
+
+    font-size: 28px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+.apresentacao-jogo p {
+
+    color: var(--menu-texto-secundario);
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    max-width: 360px;
+
+    margin: 0 auto 15px;
+
+}
+
+
+.premio-destaque {
+
+    display: block;
+
+    font-size: 36px;
+    font-weight: 900;
+
+    color: var(--menu-dourado-claro);
+
+    text-shadow:
+        0 0 20px rgba(255, 215, 0, 0.25);
+
+}
+
+
+/* =========================================
+   MENU PRINCIPAL
+========================================= */
+
+.menu-principal {
+
+    max-width: 360px;
+
+    gap: 14px;
+
+    margin: 30px auto;
+
+}
+
+
+.menu-principal .botao-menu {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    min-height: 58px;
+
+    padding: 16px 45px;
+
+    box-sizing: border-box;
+
+    letter-spacing: 1px;
+
+    transition:
+
+        transform 0.2s ease,
+
+        background-color 0.2s ease,
+
+        box-shadow 0.2s ease,
+
+        border-color 0.2s ease;
+
+}
+
+
+.menu-principal .botao-menu.principal {
+
+    min-height: 72px;
+
+    font-size: 22px;
+    font-weight: 900;
+
+    color: #101c36;
+
+    background: linear-gradient(
+        135deg,
+        #fff1a0 0%,
+        #ffd700 40%,
+        #d4af37 100%
+    );
+
+    border: 1px solid #ffe797;
+
+    box-shadow:
+
+        0 5px 0 #94701c,
+
+        0 0 25px rgba(212, 175, 55, 0.3);
+
+}
+
+
+.menu-principal .botao-menu.principal:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+
+        0 8px 0 #94701c,
+
+        0 0 35px rgba(255, 215, 0, 0.5);
+
+}
+
+
+.menu-principal .botao-menu.principal:active {
+
+    transform: translateY(4px);
+
+    box-shadow:
+
+        0 1px 0 #94701c,
+
+        0 0 15px rgba(255, 215, 0, 0.3);
+
+}
+
+
+.menu-principal .botao-menu.secundario {
+
+    background-color: rgba(17, 37, 75, 0.85);
+
+    border: 1px solid #3c527a;
+
+    color: var(--menu-texto);
+
+    font-size: 14px;
+
+}
+
+
+.menu-principal .botao-menu.secundario:hover {
+
+    background-color: var(--menu-azul-secundario);
+
+    border-color: var(--menu-dourado);
+
+    box-shadow:
+        0 0 15px rgba(212, 175, 55, 0.15);
+
+}
+
+
+.icone-menu {
+
+    font-size: 20px;
+
+    color: var(--menu-dourado);
+
+}
+
+
+.principal .icone-menu {
+
+    color: #101c36;
+
+}
+
+
+.secundario .icone-menu {
+
+    position: absolute;
+    left: 20px;
+
+}
+
+
+.seta-menu {
+
+    position: absolute;
+    right: 20px;
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 24px;
+
+}
+
+
+.menu-principal .botao-menu:focus-visible {
+
+    outline: 3px solid var(--menu-dourado-suave);
+
+    outline-offset: 5px;
+
+}
+
+
+/* =========================================
+   DESTAQUES DO JOGO
+========================================= */
+
+.destaques-jogo {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    max-width: 420px;
+
+    margin: 35px auto 25px;
+
+}
+
+
+.destaque-item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 8px 5px;
+
+}
+
+
+.destaque-item:not(:last-child) {
+
+    border-right: 1px solid
+        rgba(197, 208, 232, 0.15);
+
+}
+
+
+.destaque-icone {
+
+    color: var(--menu-dourado);
+
+    font-size: 20px;
+
+}
+
+
+.destaque-item strong {
+
+    color: var(--menu-texto);
+
+    font-size: 18px;
+
+}
+
+
+.destaque-item span:last-child {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   RODAPÉ DA TELA INICIAL
+========================================= */
+
+.rodape-inicial {
+
+    border-top: 1px solid
+        rgba(197, 208, 232, 0.12);
+
+    padding-top: 18px;
+
+}
+
+
+.rodape-inicial p {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    margin: 4px 0;
+
+}
+
+
+/* =========================================
+   ANIMAÇÕES DA TELA INICIAL
+========================================= */
+
+@keyframes entradaMenu {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes entradaLogo {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.85);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+@keyframes brilhoLogo {
+
+    0%, 100% {
+
+        box-shadow:
+
+            0 0 15px rgba(212, 175, 55, 0.25),
+
+            0 0 60px rgba(49, 93, 163, 0.45),
+
+            inset 0 0 30px rgba(0, 0, 0, 0.5);
+
+    }
+
+    50% {
+
+        box-shadow:
+
+            0 0 25px rgba(212, 175, 55, 0.4),
+
+            0 0 80px rgba(49, 93, 163, 0.6),
+
+            inset 0 0 30px rgba(0, 0, 0, 0.5);
+
+    }
+
+}
+
+
+#tela-inicial:not([hidden]) .logo-jogo {
+
+    animation:
+
+        entradaLogo 0.7s ease-out both,
+
+        brilhoLogo 4s ease-in-out 0.7s infinite;
+
+}
+
+
+#tela-inicial:not([hidden]) .apresentacao-jogo {
+
+    animation: entradaMenu 0.5s ease-out 0.2s both;
+
+}
+
+
+#tela-inicial:not([hidden]) .menu-principal {
+
+    animation: entradaMenu 0.5s ease-out 0.4s both;
+
+}
+
+
+#tela-inicial:not([hidden]) .destaques-jogo {
+
+    animation: entradaMenu 0.5s ease-out 0.6s both;
+
+}
+
+
+#tela-inicial:not([hidden]) .rodape-inicial {
+
+    animation: entradaMenu 0.5s ease-out 0.7s both;
+
+}
+
+
+
+/* =========================================
+   RESPONSIVIDADE DA TELA INICIAL
+========================================= */
+
+@media (max-width: 600px) {
+
+    #tela-inicial {
+
+        padding: 25px 16px;
+
+    }
+
+    .slogan-superior {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 18px;
+
+    }
+
+    .logo-jogo {
+
+        width: 230px;
+
+    }
+
+    .logo-show {
+
+        font-size: 36px;
+
+    }
+
+    .logo-do {
+
+        font-size: 15px;
+
+    }
+
+    .logo-milhao {
+
+        font-size: 35px;
+
+    }
+
+    .logo-estrelas {
+
+        font-size: 13px;
+
+    }
+
+    .apresentacao-jogo h1 {
+
+        font-size: 23px;
+
+    }
+
+    .apresentacao-jogo p {
+
+        font-size: 14px;
+
+    }
+
+    .premio-destaque {
+
+        font-size: 30px;
+
+    }
+
+    .menu-principal {
+
+        margin: 22px auto;
+
+    }
+
+    .menu-principal .botao-menu.principal {
+
+        min-height: 64px;
+
+        font-size: 20px;
+
+    }
+
+    .destaques-jogo {
+
+        margin: 25px auto 20px;
+
+    }
+
+    .destaque-item strong {
+
+        font-size: 16px;
+
+    }
+
+    .destaque-item span:last-child {
+
+        font-size: 11px;
+
+    }
+
+}
+
+
+@media (max-width: 350px) {
+
+    .logo-jogo {
+
+        width: 200px;
+
+    }
+
+    .logo-show {
+
+        font-size: 31px;
+
+    }
+
+    .logo-milhao {
+
+        font-size: 30px;
+
+    }
+
+    .premio-destaque {
+
+        font-size: 26px;
+
+    }
+
+    .slogan-superior {
+
+        letter-spacing: 1px;
+
+    }
+
+}
+
+
+/* =========================================
+   ACESSIBILIDADE DAS ANIMAÇÕES
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #tela-inicial *,
+    #tela-inicial *::before,
+    #tela-inicial *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+
+    }
+
+    .menu-principal .botao-menu:hover,
+    .menu-principal .botao-menu:active {
+
+        transform: none;
+
+    }
+
+}
