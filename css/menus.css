@@ -2247,3 +2247,798 @@ body:has(#tela-inicial:not([hidden])) {
 
 }
 
+
+/* =========================================
+   TELA SOBRE O JOGO
+========================================= */
+
+#tela-sobre {
+
+    max-width: 760px;
+
+    box-sizing: border-box;
+
+    padding: 30px;
+
+}
+
+
+.cabecalho-sobre {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.cabecalho-sobre h1 {
+
+    color: var(--menu-dourado-claro);
+
+    font-size: 28px;
+
+    letter-spacing: 2px;
+
+    margin: 22px 0 15px;
+
+}
+
+
+.cabecalho-sobre p {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 13px;
+
+    margin: 15px 0 0;
+
+}
+
+
+/* =========================================
+   LOGOTIPO REDUZIDO
+========================================= */
+
+.logo-jogo.logo-sobre {
+
+    width: 180px;
+
+}
+
+
+.logo-sobre .logo-show {
+
+    font-size: 28px;
+
+    letter-spacing: 4px;
+
+    padding-left: 4px;
+
+}
+
+
+.logo-sobre .logo-do {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    gap: 7px;
+
+}
+
+
+.logo-sobre .logo-do::before,
+.logo-sobre .logo-do::after {
+
+    width: 20px;
+
+}
+
+
+.logo-sobre .logo-milhao {
+
+    font-size: 27px;
+
+}
+
+
+.logo-sobre .logo-estrelas {
+
+    font-size: 11px;
+
+    margin-top: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =========================================
+   IDENTIFICAÇÃO DA VERSÃO
+========================================= */
+
+.versao-jogo {
+
+    display: inline-block;
+
+    padding: 7px 18px;
+
+    border: 1px solid var(--menu-dourado);
+
+    border-radius: 30px;
+
+    background-color: #193365;
+
+    color: var(--menu-dourado-claro);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.card-sobre {
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================================
+   CARACTERÍSTICAS DO JOGO
+========================================= */
+
+.grade-caracteristicas {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+}
+
+
+.caracteristica-jogo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 20px 10px;
+
+    background-color: #193365;
+
+    border: 1px solid #344b79;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+}
+
+
+.caracteristica-jogo > span {
+
+    font-size: 28px;
+
+}
+
+
+.caracteristica-jogo strong {
+
+    color: var(--menu-texto);
+
+    font-size: 18px;
+
+}
+
+
+.caracteristica-jogo small {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   TECNOLOGIAS UTILIZADAS
+========================================= */
+
+.grade-tecnologias {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+.tecnologia {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 90px;
+
+    padding: 15px 8px;
+
+    background-color: #08132d;
+
+    border: 1px solid #344b79;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    transition:
+
+        transform 0.2s ease,
+
+        border-color 0.2s ease;
+
+}
+
+
+.tecnologia:hover {
+
+    transform: translateY(-3px);
+
+    border-color: var(--menu-dourado);
+
+}
+
+
+.tecnologia strong {
+
+    font-size: 23px;
+
+    font-weight: 900;
+
+}
+
+
+.tecnologia small {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 11px;
+
+}
+
+
+.tecnologia-html {
+    color: #e44d26;
+}
+
+
+.tecnologia-css {
+    color: #5b91ff;
+}
+
+
+.tecnologia-js {
+    color: #f7df1e;
+}
+
+
+.tecnologia-json {
+    color: #c5d0e8;
+}
+
+
+.tecnologia-git {
+    color: #f05032;
+}
+
+
+.tecnologia-github {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HISTÓRICO DE VERSÕES
+========================================= */
+
+.historico-versoes {
+
+    position: relative;
+
+    margin-top: 25px;
+
+    padding-left: 22px;
+
+}
+
+
+.historico-versoes::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+
+    bottom: 8px;
+
+    left: 6px;
+
+    width: 2px;
+
+    background-color: #344b79;
+
+}
+
+
+.versao-item {
+
+    position: relative;
+
+    padding-left: 12px;
+
+    padding-bottom: 25px;
+
+}
+
+
+.versao-item:last-child {
+
+    padding-bottom: 0;
+
+}
+
+
+.indicador-versao {
+
+    position: absolute;
+
+    top: 5px;
+
+    left: -22px;
+
+    width: 14px;
+
+    height: 14px;
+
+    box-sizing: border-box;
+
+    border: 2px solid #899cbf;
+
+    border-radius: 50%;
+
+    background-color: #142a55;
+
+}
+
+
+.versao-atual .indicador-versao {
+
+    background-color: var(--menu-dourado);
+
+    border-color: var(--menu-dourado-claro);
+
+    box-shadow:
+        0 0 12px rgba(212, 175, 55, 0.4);
+
+}
+
+
+.conteudo-versao h3 {
+
+    color: var(--menu-texto);
+
+    font-size: 18px;
+
+    margin: 0 0 7px;
+
+}
+
+
+.versao-atual .conteudo-versao h3 {
+
+    color: var(--menu-dourado-claro);
+
+}
+
+
+.status-versao {
+
+    display: block;
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.conteudo-versao ul {
+
+    padding-left: 18px;
+
+    margin: 0;
+
+    color: var(--menu-texto-secundario);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.conteudo-versao li {
+
+    margin-bottom: 5px;
+
+}
+
+/* =========================================
+   PERFIL DO DESENVOLVEDOR
+========================================= */
+
+.perfil-desenvolvedor {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px 0;
+
+    margin-bottom: 10px;
+
+}
+
+
+.avatar-desenvolvedor {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 75px;
+
+    height: 75px;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--menu-dourado);
+
+    background: linear-gradient(
+        135deg,
+        #244b8e,
+        #08132d
+    );
+
+    color: var(--menu-dourado-claro);
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 15px rgba(212, 175, 55, 0.15);
+
+}
+
+
+.dados-desenvolvedor {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    min-width: 0;
+
+}
+
+
+.dados-desenvolvedor h3 {
+
+    color: var(--menu-texto);
+
+    font-size: 18px;
+
+    margin: 0;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+.dados-desenvolvedor span {
+
+    color: var(--menu-dourado);
+
+    font-size: 13px;
+
+}
+
+
+.dados-desenvolvedor small {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   RODAPÉ SOBRE O JOGO
+========================================= */
+
+.rodape-sobre {
+
+    text-align: center;
+
+    padding: 20px 10px 0;
+
+}
+
+
+.rodape-sobre p {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+
+}
+
+
+.rodape-sobre span {
+
+    color: var(--menu-dourado);
+
+    font-size: 15px;
+
+    letter-spacing: 5px;
+
+}
+
+
+/* =========================================
+   ANIMAÇÕES DA TELA SOBRE
+========================================= */
+
+#tela-sobre:not([hidden]) .cabecalho-sobre {
+
+    animation: entradaMenu 0.4s ease-out both;
+
+}
+
+
+#tela-sobre:not([hidden]) .card-sobre {
+
+    animation: entradaMenu 0.4s ease-out both;
+
+}
+
+
+#tela-sobre:not([hidden]) .card-sobre:nth-of-type(1) {
+    animation-delay: 0.05s;
+}
+
+
+#tela-sobre:not([hidden]) .card-sobre:nth-of-type(2) {
+    animation-delay: 0.10s;
+}
+
+
+#tela-sobre:not([hidden]) .card-sobre:nth-of-type(3) {
+    animation-delay: 0.15s;
+}
+
+
+#tela-sobre:not([hidden]) .card-sobre:nth-of-type(4) {
+    animation-delay: 0.20s;
+}
+
+
+#tela-sobre:not([hidden]) .card-sobre:nth-of-type(5) {
+    animation-delay: 0.25s;
+}
+
+
+#tela-sobre:not([hidden]) .card-sobre:nth-of-type(6) {
+    animation-delay: 0.30s;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE DA TELA SOBRE
+========================================= */
+
+@media (max-width: 600px) {
+
+    #tela-sobre {
+
+        width: 100%;
+
+        margin: 10px auto;
+
+        padding: 18px 12px;
+
+    }
+
+    .logo-jogo.logo-sobre {
+
+        width: 160px;
+
+    }
+
+    .logo-sobre .logo-show {
+
+        font-size: 25px;
+
+    }
+
+    .logo-sobre .logo-milhao {
+
+        font-size: 24px;
+
+    }
+
+    .cabecalho-sobre h1 {
+
+        font-size: 24px;
+
+    }
+
+    .grade-caracteristicas {
+
+        gap: 8px;
+
+    }
+
+    .caracteristica-jogo {
+
+        padding: 15px 6px;
+
+    }
+
+    .caracteristica-jogo strong {
+
+        font-size: 15px;
+
+    }
+
+    .caracteristica-jogo small {
+
+        font-size: 11px;
+
+    }
+
+    .grade-tecnologias {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+
+    }
+
+    .tecnologia strong {
+
+        font-size: 20px;
+
+    }
+
+    .tecnologia small {
+
+        font-size: 10px;
+
+    }
+
+    .perfil-desenvolvedor {
+
+        gap: 12px;
+
+    }
+
+    .avatar-desenvolvedor {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 21px;
+
+    }
+
+    .dados-desenvolvedor h3 {
+
+        font-size: 15px;
+
+    }
+
+    .dados-desenvolvedor span {
+
+        font-size: 12px;
+
+    }
+
+}
+
+
+@media (max-width: 350px) {
+
+    .perfil-desenvolvedor {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    #tela-sobre *,
+    #tela-sobre *::before,
+    #tela-sobre *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+
+    }
+
+    .tecnologia:hover {
+
+        transform: none;
+
+    }
+
+}
+
