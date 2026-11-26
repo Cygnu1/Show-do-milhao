@@ -160,6 +160,11 @@ const btnFecharUniversitarios = document.getElementById(
 );
 
 
+const nomeParticipante = document.getElementById(
+    "nome-participante"
+);
+
+
 // =========================================
 // CONFIGURAÇÕES DO JOGO
 // =========================================
@@ -273,6 +278,8 @@ let cartaEscolhida = false;
 let bancoUniversitarios = null;
 
 let universitariosSorteados = [];
+
+let nomeJogador = "Jogador";
 
 
 // =========================================
@@ -598,10 +605,37 @@ function validarBancoUniversitarios() {
 
 
 // =========================================
+// IDENTIFICAÇÃO DO JOGADOR
+// =========================================
+
+function definirNomeJogador(nome) {
+
+    const nomeTratado = String(nome ?? "")
+        .trim()
+        .slice(0, 30);
+
+    nomeJogador = nomeTratado || "Jogador";
+
+    atualizarPainelJogador();
+
+}
+
+
+function atualizarPainelJogador() {
+
+    nomeParticipante.textContent = nomeJogador;
+
+}
+
+
+
+// =========================================
 // INICIAR OU REINICIAR JOGO
 // =========================================
 
 function iniciarJogo() {
+
+    atualizarPainelJogador();
 
     perguntasUtilizadas = [];
 

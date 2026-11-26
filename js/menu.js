@@ -11,8 +11,6 @@ const btnMenuRegras = document.getElementById("btn-menu-regras");
 
 const btnMenuSobre = document.getElementById("btn-menu-sobre");
 
-const btnIniciarPartida = document.getElementById("btn-iniciar-partida");
-
 const botoesNavegacao = document.querySelectorAll("[data-tela]");
 
 const abasManual = document.querySelectorAll(".aba-manual");
@@ -22,11 +20,34 @@ const paineisManual = document.querySelectorAll(".painel-manual");
 const escadaPremiacao = document.getElementById("escada-premiacao");
 
 
+const formIdentificacao = document.getElementById(
+    "form-identificacao"
+);
+
+const inputNomeJogador = document.getElementById(
+    "input-nome-jogador"
+);
+
+const contadorNome = document.getElementById(
+    "contador-nome"
+);
+
+const previaNomeJogador = document.getElementById(
+    "previa-nome-jogador"
+);
+
+const btnIniciarPartida = formIdentificacao.querySelector(
+    'button[type="submit"]'
+);
+
+
 // =========================================
 // ESTADO DA NAVEGAÇÃO
 // =========================================
 
 let telaAtual = "tela-inicial";
+let dadosPartidaCarregados = false;
+let iniciandoPartida = false;
 
 
 // =========================================
@@ -62,45 +83,52 @@ function exibirTela(idTela) {
 // INÍCIO DA PARTIDA
 // =========================================
 
-function iniciarPartidaPeloMenu() {
+async function iniciarPartidaPeloMenu() {
 
-    if (btnIniciarPartida.disabled) {
-        return;
+    if (!dadosPartidaCarregados || iniciandoPartida) return;
+
+    iniciandoPartida = true;
+    btnIniciarPartida.disabled = true;
+
+    try {
+        definirNomeJogador(inputNomeJogador.value);
+        exibirTela("tela-jogo");
+        await iniciarJogo();
+    } catch (erro) {
+        console.error("Erro ao iniciar a partida:", erro);
+        exibirTela("tela-identificacao");
+        alert("Não foi possível iniciar a partida.");
+    } finally {
+        iniciandoPartida = false;
+        btnIniciarPartida.disabled = !dadosPartidaCarregados;
     }
-
-    exibirTela("tela-jogo");
-
-    iniciarJogo();
 }
-
 
 // =========================================
 // CARREGAMENTO DOS DADOS
 // =========================================
 
 function habilitarInicioPartida() {
-
-    btnIniciarPartida.disabled = false;
-
-    btnIniciarPartida.textContent = "Iniciar partida";
+    dadosPartidaCarregados = true;
+    btnIniciarPartida.disabled = iniciandoPartida;
+    btnIniciarPartida.textContent = "▶ INICIAR PARTIDA";
+    document.getElementById("aviso-carregamento-partida")?.remove();
 }
 
-
 function informarErroCarregamento(mensagem) {
-
+    dadosPartidaCarregados = false;
     btnIniciarPartida.disabled = true;
-
     btnIniciarPartida.textContent = "Erro ao carregar dados";
 
-    const telaNovoJogo = document.getElementById("tela-novo-jogo");
-
-    const aviso = document.createElement("p");
-
+    let aviso = document.getElementById("aviso-carregamento-partida");
+    if (!aviso) {
+        aviso = document.createElement("p");
+        aviso.id = "aviso-carregamento-partida";
+        aviso.setAttribute("role", "alert");
+        aviso.style.color = "#fca5a5";
+        formIdentificacao.appendChild(aviso);
+    }
     aviso.textContent = mensagem;
-
-    aviso.style.color = "#fca5a5";
-
-    telaNovoJogo.appendChild(aviso);
 }
 
 
@@ -244,16 +272,46 @@ function renderizarEscadaPremiacao() {
 }
 
 
+// =========================================
+// IDENTIFICAÇÃO DO JOGADOR
+// =========================================
+
+function atualizarPreviaJogador() {
+
+    const nomeDigitado = inputNomeJogador.value;
+
+    const nomeTratado = nomeDigitado.trim();
+
+    previaNomeJogador.textContent =
+        nomeTratado || "Jogador";
+
+    contadorNome.textContent =
+        `${nomeDigitado.length}/30`;
+
+}
+
+
+function abrirIdentificacao() {
+
+    inputNomeJogador.value = "";
+
+    atualizarPreviaJogador();
+
+    btnIniciarPartida.disabled = !dadosPartidaCarregados || iniciandoPartida;
+
+    exibirTela("tela-identificacao");
+
+}
+
 
 // =========================================
 // EVENTOS DE NAVEGAÇÃO
 // =========================================
 
-btnMenuJogar.addEventListener("click", () => {
-
-    exibirTela("tela-novo-jogo");
-
-});
+btnMenuJogar.addEventListener(
+    "click",
+    abrirIdentificacao
+);  
 
 
 btnMenuRegras.addEventListener("click", () => {
@@ -274,9 +332,6 @@ btnMenuSobre.addEventListener("click", () => {
 });
 
 
-btnIniciarPartida.addEventListener("click", iniciarPartidaPeloMenu);
-
-
 botoesNavegacao.forEach(botao => {
 
     botao.addEventListener("click", () => {
@@ -285,6 +340,22 @@ botoesNavegacao.forEach(botao => {
 
     });
 
+});
+
+
+// =========================================
+// EVENTOS DA IDENTIFICAÇÃO
+// =========================================
+
+inputNomeJogador.addEventListener(
+    "input",
+    atualizarPreviaJogador
+);
+
+
+formIdentificacao.addEventListener("submit", evento => {
+    evento.preventDefault();
+    iniciarPartidaPeloMenu();
 });
 
 
@@ -362,4 +433,8 @@ abasManual.forEach((aba, indice) => {
 // TELA INICIAL DA APLICAÇÃO
 // =========================================
 
+btnIniciarPartida.disabled = !dadosPartidaCarregados;
+if (!dadosPartidaCarregados) {
+    btnIniciarPartida.textContent = "Carregando dados...";
+}
 exibirTela("tela-inicial");

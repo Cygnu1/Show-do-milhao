@@ -197,6 +197,127 @@
     </section>
 
 
+    <!-- TELA DE IDENTIFICAÇÃO DO JOGADOR -->
+    <section id="tela-identificacao"
+            class="tela tela-menu"
+            hidden>
+
+        <!-- CABEÇALHO -->
+        <div class="cabecalho-identificacao">
+
+            <div class="icone-identificacao"
+                aria-hidden="true">
+
+                👤
+
+            </div>
+
+            <span class="slogan-identificacao">
+                O GRANDE DESAFIO
+            </span>
+
+            <h1>NOVO JOGO</h1>
+
+            <p>
+                Sua jornada rumo ao milhão começa agora.
+            </p>
+
+        </div>
+
+
+        <!-- FORMULÁRIO DE IDENTIFICAÇÃO -->
+        <form id="form-identificacao">
+
+            <article class="card-manual card-identificacao">
+
+                <label for="input-nome-jogador">
+
+                    Como podemos chamar você?
+
+                </label>
+
+                <input
+                    type="text"
+                    id="input-nome-jogador"
+                    name="nome-jogador"
+                    placeholder="Digite seu nome (opcional)"
+                    maxlength="30"
+                    autocomplete="off"
+                    spellcheck="false"
+                    aria-describedby="orientacao-nome"
+                >
+
+                <div class="informacoes-input">
+
+                    <span id="orientacao-nome">
+                        Preenchimento opcional
+                    </span>
+
+                    <span id="contador-nome">
+                        0/30
+                    </span>
+
+                </div>
+
+
+                <!-- PRÉVIA DO NOME -->
+                <div class="previa-jogador">
+
+                    <div class="avatar-jogador"
+                        aria-hidden="true">
+
+                        👤
+
+                    </div>
+
+                    <div class="dados-previa-jogador">
+
+                        <span>
+                            Você será identificado como
+                        </span>
+
+                        <strong id="previa-nome-jogador">
+                            Jogador
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- INICIAR PARTIDA -->
+            <button
+                type="submit"
+                class="botao-menu principal btn-iniciar-partida">
+
+                ▶ INICIAR PARTIDA
+
+            </button>
+
+        </form>
+
+
+        <!-- VOLTAR -->
+        <button
+            type="button"
+            class="botao-menu btn-voltar-identificacao"
+            data-tela="tela-inicial">
+
+            ← Voltar ao menu principal
+
+        </button>
+
+
+        <p class="observacao-identificacao">
+
+            Nenhum cadastro é necessário para jogar.
+
+        </p>
+
+    </section>
+
     
     <!-- TELA DE REGRAS -->
     <section id="tela-regras" class="tela tela-menu" hidden>
@@ -1176,6 +1297,33 @@
     </header>
 
     <main>
+
+        <!-- INFORMAÇÕES DO PARTICIPANTE -->
+        <section id="painel-jogador">
+
+            <div class="identificacao-participante">
+
+                <div class="icone-participante"
+                    aria-hidden="true">
+
+                    👤
+
+                </div>
+
+                <div class="dados-participante">
+
+                    <span>PARTICIPANTE</span>
+
+                    <strong id="nome-participante">
+                        Jogador
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
 
         <section id="premiacao">
 

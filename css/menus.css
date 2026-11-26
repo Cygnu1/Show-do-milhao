@@ -3042,3 +3042,567 @@ body:has(#tela-inicial:not([hidden])) {
 
 }
 
+
+/* =========================================
+   TELA DE IDENTIFICAÇÃO
+========================================= */
+
+#tela-identificacao {
+
+    max-width: 480px;
+
+    box-sizing: border-box;
+
+    padding: 30px;
+
+}
+
+
+.cabecalho-identificacao {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.icone-identificacao {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 90px;
+
+    height: 90px;
+
+    border: 2px solid var(--menu-dourado);
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #244b8e,
+        #08132d
+    );
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 0 25px rgba(212, 175, 55, 0.15);
+
+}
+
+
+.slogan-identificacao {
+
+    color: var(--menu-dourado);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.cabecalho-identificacao h1 {
+
+    color: var(--menu-dourado-claro);
+
+    font-size: 30px;
+
+    letter-spacing: 2px;
+
+    margin: 0 0 12px;
+
+}
+
+
+.cabecalho-identificacao p {
+
+    color: var(--menu-texto-secundario);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 0;
+
+}
+
+
+/* =========================================
+   FORMULÁRIO DE IDENTIFICAÇÃO
+========================================= */
+
+#form-identificacao {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.card-identificacao label {
+
+    display: block;
+
+    color: var(--menu-texto);
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+}
+
+
+#input-nome-jogador {
+
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    min-height: 52px;
+
+    padding: 14px;
+
+    background-color: #08132d;
+
+    color: #ffffff;
+
+    border: 1px solid #3c629b;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    transition:
+
+        border-color 0.2s ease,
+
+        box-shadow 0.2s ease;
+
+}
+
+
+#input-nome-jogador::placeholder {
+
+    color: #899cbf;
+
+}
+
+
+#input-nome-jogador:focus {
+
+    outline: none;
+
+    border-color: var(--menu-dourado);
+
+    box-shadow:
+        0 0 12px rgba(212, 175, 55, 0.15);
+
+}
+
+
+.informacoes-input {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 11px;
+
+}
+
+
+#contador-nome {
+
+    font-variant-numeric: tabular-nums;
+
+}
+
+
+/* =========================================
+   PRÉVIA DO JOGADOR
+========================================= */
+
+.previa-jogador {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #344b79;
+
+}
+
+
+.avatar-jogador {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 45px;
+
+    height: 45px;
+
+    background-color: #193365;
+
+    border: 1px solid var(--menu-dourado);
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+}
+
+
+.dados-previa-jogador {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    min-width: 0;
+
+}
+
+
+.dados-previa-jogador span {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 11px;
+
+}
+
+
+#previa-nome-jogador {
+
+    color: var(--menu-dourado-claro);
+
+    font-size: 19px;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================
+   BOTÕES E RODAPÉ
+========================================= */
+
+.btn-iniciar-partida {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #fff1a0,
+        #ffd700,
+        #d4af37
+    );
+
+    color: #101c36;
+
+    border: 1px solid #ffe797;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+
+        0 4px 0 #9b7b20,
+
+        0 0 20px rgba(212, 175, 55, 0.2);
+
+}
+
+
+.btn-voltar-identificacao {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+}
+
+
+.observacao-identificacao {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 12px;
+
+    text-align: center;
+
+    margin: 25px 0 0;
+
+}
+
+
+/* =========================================
+   PAINEL DO PARTICIPANTE
+========================================= */
+
+#painel-jogador {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 14px 18px;
+
+    margin-bottom: 20px;
+
+    background-color: #193365;
+
+    border: 1px solid #344b79;
+
+    border-radius: 10px;
+
+}
+
+
+.identificacao-participante {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+
+}
+
+
+.icone-participante {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 42px;
+
+    height: 42px;
+
+    background-color: #08132d;
+
+    border: 1px solid #3c629b;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+
+}
+
+
+.dados-participante {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    min-width: 0;
+
+    text-align: left;
+
+}
+
+
+.dados-participante span {
+
+    color: #899cbf;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+#nome-participante {
+
+    color: #ffd700;
+
+    font-size: 18px;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE DA IDENTIFICAÇÃO
+========================================= */
+
+@media (max-width: 600px) {
+
+    #tela-identificacao {
+
+        width: 100%;
+
+        padding: 22px 16px;
+
+        margin: 10px auto;
+
+    }
+
+    .icone-identificacao {
+
+        width: 75px;
+
+        height: 75px;
+
+        font-size: 34px;
+
+    }
+
+    .cabecalho-identificacao {
+
+        margin-bottom: 22px;
+
+    }
+
+    .cabecalho-identificacao h1 {
+
+        font-size: 25px;
+
+    }
+
+    .card-identificacao label {
+
+        font-size: 14px;
+
+    }
+
+    #previa-nome-jogador {
+
+        font-size: 17px;
+
+    }
+
+    #painel-jogador {
+
+        padding: 12px;
+
+        gap: 10px;
+
+    }
+
+    .icone-participante {
+
+        width: 35px;
+
+        height: 35px;
+
+        font-size: 17px;
+
+    }
+
+    #nome-participante {
+
+        font-size: 15px;
+
+    }
+
+}
+
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+#tela-identificacao:not([hidden])
+.cabecalho-identificacao {
+
+    animation: entradaMenu 0.4s ease-out both;
+
+}
+
+
+#tela-identificacao:not([hidden])
+#form-identificacao {
+
+    animation: entradaMenu 0.4s ease-out 0.1s both;
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    #tela-identificacao * {
+
+        animation: none !important;
+
+        transition: none !important;
+
+    }
+
+}
+
