@@ -422,7 +422,7 @@ async function carregarPerguntas() {
             bancoUniversitarios.cursos.length
         );
 
-        iniciarJogo();
+        habilitarInicioPartida();
 
     } catch (erro) {
 
@@ -434,6 +434,8 @@ async function carregarPerguntas() {
         feedback.textContent = erro.message;
 
         feedback.className = "erro";
+
+        informarErroCarregamento(erro.message);
     }
 }
 

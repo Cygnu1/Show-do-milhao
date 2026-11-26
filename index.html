@@ -9,9 +9,105 @@
     <title>Show do Milhão</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menus.css">
 </head>
 
+
+
 <body>
+    <!-- TELA INICIAL -->
+    <section id="tela-inicial" class="tela tela-menu">
+
+        <h1>Show do Milhão</h1>
+
+        <p>Você está preparado para ganhar um milhão?</p>
+
+        <div class="opcoes-menu">
+
+            <button id="btn-menu-jogar" class="botao-menu principal">
+                Jogar
+            </button>
+
+            <button id="btn-menu-regras" class="botao-menu">
+                Como jogar
+            </button>
+
+            <button id="btn-menu-sobre" class="botao-menu">
+                Sobre o jogo
+            </button>
+
+        </div>
+
+        <p class="versao-jogo">Versão 1.1.0 — Em desenvolvimento</p>
+
+    </section>
+
+
+    <!-- TELA DE NOVO JOGO -->
+    <section id="tela-novo-jogo" class="tela tela-menu" hidden>
+
+        <h1>Novo jogo</h1>
+
+        <p>Prepare-se para o desafio!</p>
+
+        <div class="opcoes-menu">
+
+            <button id="btn-iniciar-partida" class="botao-menu principal" disabled>
+                Carregando dados...
+            </button>
+
+            <button class="botao-menu" data-tela="tela-inicial">
+                Voltar
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- TELA DE REGRAS -->
+    <section id="tela-regras" class="tela tela-menu" hidden>
+
+        <h1>Como jogar</h1>
+
+        <p>As regras serão apresentadas nesta tela.</p>
+
+        <button class="botao-menu" data-tela="tela-inicial">
+            Voltar
+        </button>
+
+    </section>
+
+
+    <!-- TELA SOBRE O JOGO -->
+    <section id="tela-sobre" class="tela tela-menu" hidden>
+
+        <h1>Sobre o jogo</h1>
+
+        <p>Informações sobre o projeto.</p>
+
+        <button class="botao-menu" data-tela="tela-inicial">
+            Voltar
+        </button>
+
+    </section>
+
+
+    <!-- TELA DE RESULTADO -->
+    <section id="tela-resultado" class="tela tela-menu" hidden>
+
+        <h1>Resultado da partida</h1>
+
+        <p>As estatísticas serão apresentadas aqui.</p>
+
+        <button class="botao-menu" data-tela="tela-inicial">
+            Menu principal
+        </button>
+
+    </section>
+
+    <!-- TELA DA PARTIDA -->
+    <section id="tela-jogo" class="tela" hidden>
 
     <header>
         <h1>Show do Milhão</h1>
@@ -117,6 +213,8 @@
         </section>
 
     </main>
+
+    </section>
 
     <dialog id="modal-cartas">
 
@@ -260,8 +358,10 @@
 
     </dialog>
 
+    <script src="js/menu.js"></script>
     <script src="js/game.js"></script>
 
 </body>
+
 
 </html>

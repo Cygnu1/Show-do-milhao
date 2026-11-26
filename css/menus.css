@@ -1,0 +1,148 @@
+
+/* =========================================
+   CONTROLE DE VISIBILIDADE DAS TELAS
+========================================= */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================
+   ESTRUTURA DOS MENUS
+========================================= */
+
+.tela-menu {
+    width: 92%;
+    max-width: 600px;
+
+    margin: 40px auto;
+    padding: 40px 25px;
+
+    background-color: #10234d;
+
+    border: 1px solid #3c629b;
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+.tela-menu h1 {
+    color: #ffd700;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+.tela-menu p {
+    color: #c5d0e8;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   OPÇÕES DOS MENUS
+========================================= */
+
+.opcoes-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 100%;
+    max-width: 350px;
+
+    margin: 30px auto;
+}
+
+
+.botao-menu {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    background-color: #21447d;
+    color: #ffffff;
+
+    border: 1px solid #3c629b;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s,
+                transform 0.2s;
+}
+
+
+.botao-menu:hover:not(:disabled) {
+    background-color: #315da3;
+    transform: translateY(-2px);
+}
+
+
+.botao-menu.principal {
+    background-color: #d4af37;
+    color: #101c36;
+    border-color: #ffd700;
+}
+
+
+.botao-menu.principal:hover:not(:disabled) {
+    background-color: #ffd700;
+}
+
+
+.botao-menu:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.tela-menu .versao-jogo {
+    font-size: 12px;
+    color: #899cbf;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .tela-menu {
+        margin: 20px auto;
+        padding: 30px 20px;
+    }
+
+    .tela-menu h1 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .botao-menu {
+        transition: none;
+    }
+
+    .botao-menu:hover:not(:disabled) {
+        transform: none;
+    }
+
+}
