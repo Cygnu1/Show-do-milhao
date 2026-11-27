@@ -635,6 +635,8 @@ function atualizarPainelJogador() {
 
 function iniciarJogo() {
 
+    reiniciarEstadoPausa();
+
     atualizarPainelJogador();
 
     perguntasUtilizadas = [];
@@ -672,6 +674,8 @@ function iniciarJogo() {
     iniciarCronometro();
 
     carregarNovaPergunta();
+
+    atualizarBotaoPausa();
 }
 
 
@@ -810,6 +814,10 @@ function carregarNovaPergunta() {
 
 function selecionarAlternativa(indice) {
 
+    if (jogoPausado) {
+        return;
+    }
+
     if (
         jogoEncerrado ||
         respostaConfirmada ||
@@ -863,8 +871,11 @@ function bloquearControles() {
 
 function confirmarResposta() {
 
+    if (jogoPausado) {
+        return;
+    }
+
     if (
-        jogoEncerrado ||
         alternativaSelecionada === null ||
         respostaConfirmada ||
         perguntaAtual === null
@@ -937,6 +948,10 @@ function confirmarResposta() {
 
 function avancarRodada() {
 
+    if (jogoPausado) {
+        return;
+    }
+    
     if (
         jogoEncerrado ||
         !respostaConfirmada ||
@@ -957,6 +972,10 @@ function avancarRodada() {
 // =========================================
 
 function pararJogo() {
+
+    if (jogoPausado) {
+        return;
+    }
 
     if (jogoEncerrado || respostaConfirmada) {
         return;
@@ -991,6 +1010,10 @@ function encerrarJogo(
 
     encerrarCronometro();
 
+    reiniciarEstadoPausa();
+
+    atualizarBotaoPausa();
+
     premioAcumulado = premioFinal;
 
     bloquearControles();
@@ -1017,6 +1040,52 @@ function encerrarJogo(
 
 
 // =========================================
+// ABANDONAR PARTIDA
+// =========================================
+
+function abandonarPartida() {
+
+    jogoEncerrado = true;
+
+    reiniciarEstadoPausa();
+
+    reiniciarCronometro();
+
+    bloquearControles();
+
+    perguntaAtual = null;
+
+    alternativaSelecionada = null;
+
+    respostaConfirmada = false;
+
+    rodadaAtual = 0;
+
+    premioAcumulado = 0;
+
+    perguntasUtilizadas = [];
+
+    alternativasEliminadas = [];
+
+    cartaEscolhida = false;
+
+    ajudasDisponiveis = {
+        ...limitesAjudas
+    };
+
+    btnProxima.hidden = true;
+
+    btnReiniciar.hidden = true;
+
+    atualizarBotaoPausa();
+
+    console.log("Progresso da partida descartado.");
+
+}
+
+
+
+// =========================================
 // CONTROLE GERAL DAS AJUDAS
 // =========================================
 
@@ -1024,6 +1093,7 @@ function podeUsarAjuda(tipo) {
 
     return (
         !jogoEncerrado &&
+        !jogoPausado &&
         !respostaConfirmada &&
         perguntaAtual !== null &&
         rodadaAtual < premios.length - 1 &&
@@ -1118,6 +1188,7 @@ function abrirCartas() {
     btnFecharCartas.disabled = true;
 
     modalCartas.showModal();
+    atualizarBotaoPausa();
 }
 
 // =========================================
@@ -1294,6 +1365,7 @@ function abrirPulo() {
         ajudasDisponiveis.pulos;
 
     modalPular.showModal();
+    atualizarBotaoPausa();
 }
 
 // =========================================
@@ -1539,6 +1611,7 @@ function abrirPlacas() {
         "A decisão final continua sendo sua!";
 
     modalPlacas.showModal();
+    atualizarBotaoPausa();
 
     // Animar o gráfico
 
@@ -1974,6 +2047,7 @@ function abrirUniversitarios() {
     );
 
     modalUniversitarios.showModal();
+    atualizarBotaoPausa();
 
     console.table(
         respostas.map(function(resposta) {

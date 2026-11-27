@@ -1355,6 +1355,23 @@
 
             </div>
 
+
+            <!-- BOTÃO DE PAUSA -->
+            <button
+                type="button"
+                id="btn-pausar"
+                class="botao-pausa"
+                aria-label="Pausar partida"
+                aria-haspopup="dialog"
+                aria-controls="modal-pausa"
+                title="Pausar partida (Esc)"
+                disabled>
+
+                <span aria-hidden="true">Ⅱ</span>
+
+            </button>
+
+
         </section>
 
 
@@ -1601,8 +1618,174 @@
 
     </dialog>
 
+
+    <!-- ======================================
+        MODAL DE PAUSA
+    ======================================= -->
+
+    <dialog
+        id="modal-pausa"
+        class="modal-pausa"
+        aria-labelledby="titulo-modal-pausa">
+
+        <!-- MENU PRINCIPAL DA PAUSA -->
+        <div id="conteudo-menu-pausa">
+
+            <div class="cabecalho-pausa">
+
+                <div class="icone-modal-pausa"
+                    aria-hidden="true">
+
+                    Ⅱ
+
+                </div>
+
+                <h2 id="titulo-modal-pausa">
+                    JOGO PAUSADO
+                </h2>
+
+                <p>O que deseja fazer?</p>
+
+            </div>
+
+
+            <!-- RESUMO DA PARTIDA -->
+            <div class="resumo-pausa">
+
+                <div class="informacao-pausa">
+
+                    <span>PERGUNTA ATUAL</span>
+
+                    <strong id="pergunta-pausa">
+                        1 de 16
+                    </strong>
+
+                </div>
+
+                <div class="informacao-pausa">
+
+                    <span>ACUMULADO</span>
+
+                    <strong id="premio-pausa">
+                        R$ 0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- OPÇÕES -->
+            <div class="opcoes-pausa">
+
+                <button
+                    type="button"
+                    id="btn-continuar-partida"
+                    class="botao-menu principal"
+                    autofocus>
+
+                    ▶ CONTINUAR PARTIDA
+
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-reiniciar-pausa"
+                    class="botao-menu">
+
+                    ↻ Reiniciar partida
+
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-menu-pausa"
+                    class="botao-menu">
+
+                    ⌂ Menu principal
+
+                </button>
+
+            </div>
+
+
+            <!-- AVISO SOBRE O TEMPO -->
+            <div class="aviso-cronometro-pausa">
+
+                <span aria-hidden="true">⏱</span>
+
+                <p>
+                    O cronômetro continua contabilizando
+                    o tempo durante a pausa.
+                </p>
+
+            </div>
+
+            <p class="atalho-pausa">
+                Pressione Esc para continuar
+            </p>
+
+        </div>
+
+
+        <!-- CONFIRMAÇÃO DE REINÍCIO OU ABANDONO -->
+        <div id="conteudo-confirmacao-pausa" hidden>
+
+            <div class="cabecalho-pausa">
+
+                <div class="icone-confirmacao-pausa"
+                    aria-hidden="true">
+
+                    ⚠
+
+                </div>
+
+                <h2 id="titulo-confirmacao-pausa">
+                    Abandonar partida?
+                </h2>
+
+                <p id="mensagem-confirmacao-pausa"></p>
+
+            </div>
+
+            <div class="aviso-perda-progresso">
+
+                Todo o progresso da partida atual
+                será perdido, incluindo a premiação
+                acumulada.
+
+            </div>
+
+            <div class="opcoes-pausa">
+
+                <button
+                    type="button"
+                    id="btn-confirmar-acao-pausa"
+                    class="botao-menu botao-pausa-perigo">
+
+                    Confirmar
+
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-cancelar-acao-pausa"
+                    class="botao-menu">
+
+                    Cancelar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </dialog>
+
+
     <script src="js/menu.js"></script>
     <script src="js/timer.js"></script>
+    <script src="js/pause.js"></script>
     <script src="js/game.js"></script>
 
 </body>

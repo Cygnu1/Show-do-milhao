@@ -3781,3 +3781,587 @@ body:has(#tela-inicial:not([hidden])) {
 
 }
 
+
+/* =========================================
+   BOTÃO DE PAUSA
+========================================= */
+
+.botao-pausa {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    background-color: #08132d;
+
+    color: var(--menu-dourado-claro);
+
+    border: 1px solid var(--menu-dourado);
+
+    border-radius: 9px;
+
+    font-size: 24px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.botao-pausa:hover:not(:disabled) {
+
+    background-color: #244b8e;
+
+    transform: translateY(-2px);
+
+}
+
+
+.botao-pausa:disabled {
+
+    opacity: 0.4;
+
+    cursor: not-allowed;
+
+}
+
+
+.botao-pausa:focus-visible {
+
+    outline: 2px solid #ffd700;
+
+    outline-offset: 3px;
+
+}
+
+
+/* =========================================
+   MODAL DE PAUSA
+========================================= */
+
+#modal-pausa {
+
+    position: fixed;
+
+    inset: 0;
+
+    margin: auto;
+
+    width: min(440px, 92vw);
+
+    max-height: 90vh;
+    max-height: 90dvh;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        160deg,
+        #142a55,
+        #08132d
+    );
+
+    color: #ffffff;
+
+    border: 2px solid var(--menu-dourado);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+}
+
+
+#modal-pausa::backdrop {
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    backdrop-filter: blur(5px);
+
+}
+
+
+#modal-pausa[open] {
+
+    animation: entradaModalPausa 0.25s ease-out;
+
+}
+
+
+@keyframes entradaModalPausa {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* Impede a rolagem da página ao fundo */
+
+body:has(#modal-pausa[open]) {
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================
+   CABEÇALHO DA PAUSA
+========================================= */
+
+.cabecalho-pausa {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.icone-modal-pausa,
+.icone-confirmacao-pausa {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 75px;
+    height: 75px;
+
+    background-color: #193365;
+
+    border: 2px solid var(--menu-dourado);
+
+    border-radius: 50%;
+
+    color: var(--menu-dourado-claro);
+
+    font-size: 38px;
+
+    font-weight: 900;
+
+    margin-bottom: 5px;
+
+}
+
+
+.cabecalho-pausa h2 {
+
+    color: var(--menu-dourado-claro);
+
+    font-size: 26px;
+
+    letter-spacing: 1px;
+
+    margin: 0;
+
+}
+
+
+.cabecalho-pausa p {
+
+    color: var(--menu-texto-secundario);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 0;
+
+}
+
+
+/* =========================================
+   RESUMO DA PARTIDA
+========================================= */
+
+.resumo-pausa {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.informacao-pausa {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 8px;
+
+    background-color: #08132d;
+
+    border: 1px solid #344b79;
+
+    border-radius: 10px;
+
+}
+
+
+.informacao-pausa span {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.informacao-pausa strong {
+
+    color: var(--menu-dourado-claro);
+
+    font-size: 18px;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================
+   OPÇÕES DO MENU DE PAUSA
+========================================= */
+
+.opcoes-pausa {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.opcoes-pausa .botao-menu {
+
+    min-height: 50px;
+
+    font-size: 15px;
+
+}
+
+
+.opcoes-pausa .principal {
+
+    min-height: 58px;
+
+    background: linear-gradient(
+        135deg,
+        #fff1a0,
+        #ffd700,
+        #d4af37
+    );
+
+    color: #101c36;
+
+    font-weight: 900;
+
+}
+
+
+.opcoes-pausa .botao-menu:focus-visible {
+
+    outline: 2px solid #ffd700;
+
+    outline-offset: 3px;
+
+}
+
+
+/* =========================================
+   AVISO DO CRONÔMETRO
+========================================= */
+
+.aviso-cronometro-pausa {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #344b79;
+
+    text-align: left;
+
+}
+
+
+.aviso-cronometro-pausa > span {
+
+    color: var(--menu-dourado);
+
+    font-size: 22px;
+
+}
+
+
+.aviso-cronometro-pausa p {
+
+    color: var(--menu-texto-secundario);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin: 0;
+
+}
+
+
+.atalho-pausa {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 11px;
+
+    margin: 18px 0 0;
+
+}
+
+
+/* =========================================
+   CONFIRMAÇÃO DE ABANDONO
+========================================= */
+
+.aviso-perda-progresso {
+
+    padding: 16px;
+
+    margin-bottom: 24px;
+
+    background-color: rgba(184, 50, 64, 0.12);
+
+    border: 1px solid #b83240;
+
+    border-radius: 9px;
+
+    color: #fecaca;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.opcoes-pausa .botao-pausa-perigo {
+
+    background-color: #b83240;
+
+    border-color: #dc5260;
+
+    color: #ffffff;
+
+}
+
+
+.opcoes-pausa .botao-pausa-perigo:hover:not(:disabled) {
+
+    background-color: #d13d4d;
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE DO MENU DE PAUSA
+========================================= */
+
+@media (max-width: 600px) {
+
+    #modal-pausa {
+
+        padding: 22px 18px;
+
+    }
+
+    .botao-pausa {
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 20px;
+
+    }
+
+    .cabecalho-pausa h2 {
+
+        font-size: 22px;
+
+    }
+
+    .icone-modal-pausa,
+    .icone-confirmacao-pausa {
+
+        width: 60px;
+        height: 60px;
+
+        font-size: 30px;
+
+    }
+
+    .informacao-pausa strong {
+
+        font-size: 16px;
+
+    }
+
+    .opcoes-pausa .botao-menu {
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* Reorganização do painel em telas pequenas */
+
+@media (max-width: 420px) {
+
+    #painel-jogador {
+
+        flex-wrap: wrap;
+
+    }
+
+    .identificacao-participante {
+
+        width: 100%;
+
+    }
+
+    .painel-cronometro {
+
+        flex: 1;
+
+        width: auto;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding: 8px 0;
+
+        border-left: none;
+
+        border-top: none;
+
+    }
+
+}
+
+
+@media (max-width: 350px) {
+
+    .rotulo-cronometro {
+
+        font-size: 8px;
+
+    }
+
+    #tempo-partida {
+
+        font-size: 16px;
+
+    }
+
+    .resumo-pausa {
+
+        gap: 8px;
+
+    }
+
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+
+    .atalho-pausa {
+
+        display: none;
+
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    #modal-pausa,
+    .botao-pausa {
+
+        animation: none !important;
+
+        transition: none !important;
+
+    }
+
+    .botao-pausa:hover {
+
+        transform: none;
+
+    }
+
+}
+
