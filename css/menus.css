@@ -3606,3 +3606,178 @@ body:has(#tela-inicial:not([hidden])) {
 
 }
 
+
+/* =========================================
+   CRONÔMETRO DA PARTIDA
+========================================= */
+
+.painel-cronometro {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    gap: 6px;
+
+    padding: 5px 0 5px 18px;
+
+    border-left: 1px solid #344b79;
+
+}
+
+
+.rotulo-cronometro {
+
+    color: var(--menu-texto-discreto);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.conteudo-cronometro {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.icone-cronometro {
+
+    color: var(--menu-dourado);
+
+    font-size: 20px;
+
+}
+
+
+#tempo-partida {
+
+    color: var(--menu-dourado-claro);
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    font-variant-numeric: tabular-nums;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================
+   CRONÔMETRO ENCERRADO
+========================================= */
+
+.painel-cronometro.encerrado #tempo-partida {
+
+    color: var(--menu-texto-secundario);
+
+}
+
+
+.painel-cronometro.encerrado .icone-cronometro {
+
+    opacity: 0.6;
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE DO CRONÔMETRO
+========================================= */
+
+@media (max-width: 600px) {
+
+    .painel-cronometro {
+
+        padding-left: 10px;
+
+        gap: 5px;
+
+    }
+
+    .rotulo-cronometro {
+
+        font-size: 9px;
+
+        letter-spacing: 0.5px;
+
+    }
+
+    .conteudo-cronometro {
+
+        gap: 5px;
+
+    }
+
+    .icone-cronometro {
+
+        font-size: 15px;
+
+    }
+
+    #tempo-partida {
+
+        font-size: 18px;
+
+        letter-spacing: 0.5px;
+
+    }
+
+}
+
+
+@media (max-width: 350px) {
+
+    #painel-jogador {
+
+        flex-wrap: wrap;
+
+    }
+
+    .identificacao-participante {
+
+        width: 100%;
+
+    }
+
+    .painel-cronometro {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding: 10px 0 0;
+
+        border-left: none;
+
+        border-top: 1px solid #344b79;
+
+    }
+
+}
+

@@ -1298,9 +1298,11 @@
 
     <main>
 
+        
         <!-- INFORMAÇÕES DO PARTICIPANTE -->
         <section id="painel-jogador">
 
+            <!-- IDENTIFICAÇÃO -->
             <div class="identificacao-participante">
 
                 <div class="icone-participante"
@@ -1322,7 +1324,39 @@
 
             </div>
 
+
+            <!-- CRONÔMETRO DA PARTIDA -->
+            <div id="painel-cronometro"
+                class="painel-cronometro">
+
+                <span class="rotulo-cronometro">
+
+                    TEMPO DE JOGO
+
+                </span>
+
+                <div class="conteudo-cronometro">
+
+                    <span class="icone-cronometro"
+                        aria-hidden="true">
+
+                        ⏱
+
+                    </span>
+
+                    <span id="tempo-partida"
+                        role="timer">
+
+                        00:00:00
+
+                    </span>
+
+                </div>
+
+            </div>
+
         </section>
+
 
 
         <section id="premiacao">
@@ -1568,6 +1602,7 @@
     </dialog>
 
     <script src="js/menu.js"></script>
+    <script src="js/timer.js"></script>
     <script src="js/game.js"></script>
 
 </body>

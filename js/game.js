@@ -669,6 +669,8 @@ function iniciarJogo() {
 
     respostasUniversitarios.replaceChildren();
 
+    iniciarCronometro();
+
     carregarNovaPergunta();
 }
 
@@ -986,6 +988,8 @@ function encerrarJogo(
 ) {
 
     jogoEncerrado = true;
+
+    encerrarCronometro();
 
     premioAcumulado = premioFinal;
 
